@@ -1,0 +1,7 @@
+<div class="container">
+    <ng-container *ngIf="book$ | async as book else loader">
+        <h1>More Details About - {{ book.title }}</h1>
+        <p>{{ book.excerpt }}</p>
+    </ng-container>
+    <ng-template #loader>Some error occur, go back to <a routerLink="/">home page</a>.</ng-template>
+</div>

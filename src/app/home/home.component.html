@@ -1,0 +1,12 @@
+<div class="container">
+  <h1 class="clearfix">Book List</h1>
+  <div class="row">  
+    <ul class="list-group">
+      <li (click)="navigateToBook(book.id)" class="list-group-item" *ngFor="let book of books$ | async">
+        <h2>{{ book.title }}</h2>
+        <strong>Published Date: {{ book.publishDate | date}}</strong>
+        <p>{{ book.excerpt }}</p>      
+      </li>
+    </ul>
+  </div>
+</div>
